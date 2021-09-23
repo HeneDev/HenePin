@@ -4,15 +4,15 @@ A wep app i made for practice using ReactJS and NodeJS. Map is made by MapBox an
 
 ## Screenshots
 
-![General view of MapBox UI](https://imgur.com/a/Bs6YQk6)
+![General view of MapBox UI](https://github.com/HeneDev/HenePin/blob/master/img/qOa60NO.png)
 
-![Image of a map pin added to the map](https://imgur.com/a/3SxmdCm)
+![Image of a map pin added to the map](https://github.com/HeneDev/HenePin/blob/master/img/ZoTQeju.png)
 
-![Pins made by other users than the current user are colored different](https://imgur.com/a/Ry5mVsA)
+![Pins made by other users than the current user are colored different](https://github.com/HeneDev/HenePin/blob/master/img/biv8Sbv.png)
 
-![New pin module](https://imgur.com/a/avPmfgM)
+![New pin module](https://github.com/HeneDev/HenePin/blob/master/img/RezMkpG.png)
 
-![Pin information shown](https://imgur.com/a/VwspNHH)
+![Pin information shown](https://github.com/HeneDev/HenePin/blob/master/img/0jyAgJq.png)
 
 ### Installation
 
