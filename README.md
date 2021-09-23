@@ -31,7 +31,7 @@ A wep app i made for practice using ReactJS and NodeJS. Map is made by MapBox an
 
 ### Installation
 
-#### Requirements\*\*:
+#### Requirements:
 
 - npm
 - mongodb cluster
