@@ -10,7 +10,7 @@ A wep app i made for practice using ReactJS and NodeJS. Map is made by MapBox an
 </p>
 
 **Image of a map pin added to the map**
-<p align="right">
+<p align="left">
   <img width="376" height="592" src="https://github.com/HeneDev/HenePin/blob/master/img/ZoTQeju.png">
 </p>
 
