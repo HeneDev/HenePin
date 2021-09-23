@@ -1,4 +1,4 @@
-# HenePinMapApp
+# HenePin
 
 A wep app i made for practice using ReactJS and NodeJS. Map is made by MapBox and Icons are from Material-Ui.
 
