@@ -17,8 +17,9 @@ A wep app i made for practice using ReactJS and NodeJS. Map is made by MapBox an
 ### Installation
 
 - **Requirements**:
-- npm
-- mongodb cluster
+
+* npm
+* mongodb cluster
 
 - **Cloning repository and changing directory:**
 
