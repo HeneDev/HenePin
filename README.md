@@ -15,17 +15,17 @@ A wep app i made for practice using ReactJS and NodeJS. Map is made by MapBox an
 </p>
 
 **Pins made by other users than the current user are colored different**
-<p align="right">
+<p align="left">
   <img width="363" height="498" src="https://github.com/HeneDev/HenePin/blob/master/img/biv8Sbv.png">
 </p>
 
 **New pin module**
-<p align="right">
+<p align="left">
   <img width="595" height="586" src="https://github.com/HeneDev/HenePin/blob/master/img/RezMkpG.png">
 </p>
 
 **Pin information shown**
-<p align="right">
+<p align="left">
   <img width="446" height="480" src="https://github.com/HeneDev/HenePin/blob/master/img/0jyAgJq.png">
 </p>
 
