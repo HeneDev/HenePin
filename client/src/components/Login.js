@@ -14,12 +14,14 @@ const Login = (props) => {
       username: usernameRef.current.value,
       password: passwordRef.current.value,
     };
+
     try {
       const res = await axios.post("/users/login", user);
-      props.setCurrentUsername(res.data.username);
+      props.setCurrentUser(res.data.username);
       localStorage.setItem("user", res.data.username);
       props.onClose();
     } catch (err) {
+      console.log(err);
       setError(true);
     }
   };

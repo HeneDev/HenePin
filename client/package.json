@@ -31,7 +31,7 @@
       "react-app/jest"
     ]
   },
-  "proxy": "http://localhost:8800/",
+  "proxy": "http://localhost:8800/api",
   "react-dotenv": {
     "whitelist": [
       "MAP_TOKEN"

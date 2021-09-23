@@ -1,13 +1,12 @@
 const router = require("express").Router();
 const User = require("../models/User");
 const bcrypt = require("bcrypt");
-const { response } = require("express");
 const saltRounds = 12;
 
 // Create new user
 router.post("/register", async (req, res) => {
   try {
-    const hashedPassword = await bcrypt.hash(req.body.password, 12);
+    const hashedPassword = await bcrypt.hash(req.body.password, saltRounds);
 
     const newUser = new User({
       username: req.body.username,
@@ -15,18 +14,17 @@ router.post("/register", async (req, res) => {
       email: req.body.email,
     });
 
-    await newUser.save();
-    res.status(200).json(newUser._id);
+    const user = await newUser.save();
+    res.status(200).json(user._id);
   } catch (err) {
-    console.log(err);
     res.status(500).json(err);
   }
 });
 
 // Login
-router.get("/login", async (req, res) => {
+router.post("/login", async (req, res) => {
   try {
-    const user = await User.find({
+    const user = await User.findOne({
       username: req.body.username,
     });
 
@@ -41,7 +39,7 @@ router.get("/login", async (req, res) => {
     // Correct login credentials
     res.status(200).json({ _id: req.body.id, username: req.body.username });
   } catch (err) {
-    response.status(500).json(err);
+    res.status(500).json(err);
   }
 });
 

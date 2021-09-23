@@ -6,12 +6,13 @@ import { format } from "timeago.js";
 import "./App.css";
 import Register from "./components/Register";
 import Login from "./components/Login";
+import NewPinForm from "./components/NewPinForm";
 
 const MAPBOX_TOKEN = process.env.REACT_APP_TOKEN;
 
-function App() {
+const App = () => {
   const localStorage = window.localStorage;
-  const [currentUser, setCurrentUser] = useState(null);
+  const [currentUser, setCurrentUser] = useState(localStorage.getItem("user"));
   const [pins, setPins] = useState([]);
   const [currentPlaceId, setCurrentPlaceId] = useState(null);
   const [newPlace, setNewPlace] = useState(null);
@@ -39,17 +40,6 @@ function App() {
     });
   };
 
-  const handleTitleChange = (e) => {
-    setTitle(e.target.value);
-  };
-
-  const handleDescriptionChange = (e) => {
-    setDescription(e.target.value);
-  };
-  const handleRatingChange = (e) => {
-    setRating(e.target.value);
-  };
-
   const handlePopupClose = () => {
     setCurrentPlaceId(null);
   };
@@ -60,6 +50,11 @@ function App() {
 
   const handleShowLogin = () => {
     setShowLogin((prevShowLogin) => !prevShowLogin);
+  };
+
+  const handleLogout = () => {
+    setCurrentUser(null);
+    localStorage.removeItem("user");
   };
 
   const handleSubmit = async (e) => {
@@ -167,6 +162,7 @@ function App() {
                     fontSize: 7 * viewport.zoom,
                     cursor: "pointer",
                     color: "tomato",
+                    zIndex: 1,
                   }}
                 />
               </Marker>
@@ -178,40 +174,19 @@ function App() {
                 anchor="left"
                 onClose={() => setNewPlace(null)}
               >
-                <div>
-                  <form type="submit">
-                    <label>Title</label>
-                    <input
-                      placeholder="Enter a title"
-                      onChange={handleTitleChange}
-                    ></input>
-                    <label>Description</label>
-                    <textarea
-                      placeholder="Describe this place"
-                      onChange={handleDescriptionChange}
-                    ></textarea>
-                    <label>Rating</label>
-                    <select onChange={handleRatingChange}>
-                      <option value="1">1</option>
-                      <option value="2">2</option>
-                      <option value="3">3</option>
-                      <option value="4">4</option>
-                      <option value="5">5</option>
-                    </select>
-                    <button
-                      type="submit"
-                      className="submitButton"
-                      onClick={handleSubmit}
-                    >
-                      Add Pin
-                    </button>
-                  </form>
-                </div>
+                <NewPinForm
+                  handleSubmit={handleSubmit}
+                  setTitle={setTitle}
+                  setDescription={setDescription}
+                  setRating={setRating}
+                />
               </Popup>
             </>
           )}
           {currentUser ? (
-            <button className="button logout">Logout</button>
+            <button className="button logout" onClick={handleLogout}>
+              Logout
+            </button>
           ) : (
             <div className="buttons">
               <button className="button login" onClick={handleShowLogin}>
@@ -234,6 +209,6 @@ function App() {
       </div>
     </>
   );
-}
+};
 
 export default App;

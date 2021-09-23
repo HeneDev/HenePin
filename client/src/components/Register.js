@@ -15,9 +15,9 @@ const Register = (props) => {
     e.preventDefault();
 
     const newUser = {
-      username: nameRef,
-      email: emailRef,
-      password: passwordRef,
+      username: nameRef.current.value,
+      email: emailRef.current.value,
+      password: passwordRef.current.value,
     };
 
     try {
@@ -35,11 +35,11 @@ const Register = (props) => {
         <Room />
         HenePin
       </div>
-      <form type="submit">
+      <form onSubmit={handleSubmit}>
         <input type="text" placeholder="username" ref={nameRef} />
         <input type="email" placeholder="email" ref={emailRef} />
         <input type="password" placeholder="password" ref={passwordRef} />
-        <button className="registerBtn" onSubmit={handleSubmit}>
+        <button className="registerBtn" type="submit">
           Register
         </button>
         {success ? (
