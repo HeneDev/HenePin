@@ -5,19 +5,29 @@ A wep app i made for practice using ReactJS and NodeJS. Map is made by MapBox an
 ## Screenshots
 
 **General view of MapBox UI**
-![General view of MapBox UI](https://github.com/HeneDev/HenePin/blob/master/img/qOa60NO.png)
+<p align="center">
+  <img width="460" height="300" src="https://github.com/HeneDev/HenePin/blob/master/img/qOa60NO.png">
+</p>
 
 **Image of a map pin added to the map**
-![Image of a map pin added to the map](https://github.com/HeneDev/HenePin/blob/master/img/ZoTQeju.png)
+<p align="center">
+  <img width="460" height="300" src="https://github.com/HeneDev/HenePin/blob/master/img/ZoTQeju.png">
+</p>
 
 **Pins made by other users than the current user are colored different**
-![Pins made by other users than the current user are colored different](https://github.com/HeneDev/HenePin/blob/master/img/biv8Sbv.png)
+<p align="center">
+  <img width="460" height="300" src="https://github.com/HeneDev/HenePin/blob/master/img/biv8Sbv.png">
+</p>
 
 **New pin module**
-![New pin module](https://github.com/HeneDev/HenePin/blob/master/img/RezMkpG.png)
+<p align="center">
+  <img width="460" height="300" src="https://github.com/HeneDev/HenePin/blob/master/img/RezMkpG.png">
+</p>
 
 **Pin information shown**
-![Pin information shown](https://github.com/HeneDev/HenePin/blob/master/img/0jyAgJq.png)
+<p align="center">
+  <img width="460" height="300" src="https://github.com/HeneDev/HenePin/blob/master/img/0jyAgJq.png">
+</p>
 
 ### Installation
 
